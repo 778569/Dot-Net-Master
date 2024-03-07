@@ -16,16 +16,28 @@ internal class Program
         //Console.WriteLine(Obj.GetType);
         //Console.WriteLine(j.GetType);
 
-        StringBuilder stringBuilder = new StringBuilder("Kavinda");
+        //StringBuilder stringBuilder = new StringBuilder("Kavinda");
 
-        stringBuilder.Append("Buddhika");
-        stringBuilder.Append("Bandara");
-        stringBuilder.Insert(7,"Bandara");
-        stringBuilder.Replace("Bandara","Shaku");
+        //stringBuilder.Append("Buddhika");
+        //stringBuilder.Append("Bandara");
+        //stringBuilder.Insert(7,"Bandara");
+        //stringBuilder.Replace("Bandara","Shaku");
 
-        Console.WriteLine(stringBuilder);
+        //Console.WriteLine(stringBuilder);
 
+        try
+        {
+            throw new Exception();
+        }
+        catch (Exception e)
+        {
 
+            Console.WriteLine(e);
+        }
+        finally
+        {
+            Console.WriteLine("All process over");
+        }
 
 
 
