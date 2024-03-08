@@ -39,11 +39,29 @@ internal class Program
         //    Console.WriteLine("All process over");
         //}
 
-        Func<int, int> square = (int num) => num * num;
-        int num = 5;
-        int result = square(num);
-        Console.WriteLine($"Square is: {result}");
+        //var square = (int num) => num * num;
+        //int num = 5;
+        //int result = square(num);
+        //Console.WriteLine($"Square is: {result}");
+
+        //Console.ReadLine();
+
+
+        int x = 5;
+
+        Console.WriteLine(x);
+
+        TestPassByRef(ref x);
+
+        Console.WriteLine(x);
 
         Console.ReadLine();
+
+    }
+
+    public static int TestPassByRef(ref int x)
+    {
+        x= x * x;
+        return x;
     }
 }
