@@ -4,6 +4,7 @@ using System.Text;
 
 internal class Program
 {
+    private static volatile bool _shouldTerminate = false;
     private static void Main(string[] args)
     {
         // Boxing 
@@ -60,22 +61,26 @@ internal class Program
         //Console.ReadLine();
 
         //Computed computed = new Computed("Kavinda","Bandara");
-       
+
         //Console.WriteLine(computed.FullName);
 
-        foreach (int evenNumber in GenerateEvenNumbers())
-        {
-            if (evenNumber >50)
-            {
-                break;
-            }
+        //foreach (int evenNumber in GenerateEvenNumbers())
+        //{
+        //    if (evenNumber >50)
+        //    {
+        //        break;
+        //    }
 
-            Console.WriteLine(evenNumber);
-        }
+        //    Console.WriteLine(evenNumber);
+        //}
 
 
-       
+        Thread workerthread = new Thread(Worker);
+        workerthread.Start();
 
+        Console.ReadLine();
+        _shouldTerminate = true;
+        workerthread.Join(); 
 
     }
 
@@ -93,5 +98,18 @@ internal class Program
             yield return number;
             number += 2;
         }
+    }
+
+    public static void Worker()
+    {
+        int counter = 0;
+
+        while (!_shouldTerminate)
+        {
+            counter++;
+
+        }
+
+        Console.WriteLine("Terminated after {0} iterations.", counter);
     }
 }
