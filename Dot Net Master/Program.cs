@@ -1,4 +1,5 @@
 ﻿using Dot_Net_Master;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 internal class Program
@@ -58,10 +59,22 @@ internal class Program
 
         //Console.ReadLine();
 
-        Computed computed = new Computed("Kavinda","Bandara");
+        //Computed computed = new Computed("Kavinda","Bandara");
        
-        Console.WriteLine(computed.FullName);
+        //Console.WriteLine(computed.FullName);
 
+        foreach (int evenNumber in GenerateEvenNumbers())
+        {
+            if (evenNumber >50)
+            {
+                break;
+            }
+
+            Console.WriteLine(evenNumber);
+        }
+
+
+       
 
 
     }
@@ -70,5 +83,15 @@ internal class Program
     {
         x= x * x;
         return x;
+    }
+
+    public static IEnumerable<int> GenerateEvenNumbers()
+    {
+        int number = 0;
+        while (true)
+        {
+            yield return number;
+            number += 2;
+        }
     }
 }
