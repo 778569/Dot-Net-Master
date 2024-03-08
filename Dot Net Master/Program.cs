@@ -25,21 +25,24 @@ internal class Program
 
         //Console.WriteLine(stringBuilder);
 
-        try
-        {
-            throw new Exception();
-        }
-        catch (Exception e)
-        {
+        //try
+        //{
+        //    throw new Exception();
+        //}
+        //catch (Exception e)
+        //{
 
-            Console.WriteLine(e);
-        }
-        finally
-        {
-            Console.WriteLine("All process over");
-        }
+        //    Console.WriteLine(e);
+        //}
+        //finally
+        //{
+        //    Console.WriteLine("All process over");
+        //}
 
-
+        Func<int, int> square = (int num) => num * num;
+        int num = 5;
+        int result = square(num);
+        Console.WriteLine($"Square is: {result}");
 
         Console.ReadLine();
     }
