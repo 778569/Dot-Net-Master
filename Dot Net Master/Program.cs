@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using Dot_Net_Master;
+using System.Text;
 
 internal class Program
 {
@@ -47,15 +48,21 @@ internal class Program
         //Console.ReadLine();
 
 
-        int x = 5;
+        //int x = 5;
 
-        Console.WriteLine(x);
+        //Console.WriteLine(x);
 
-        TestPassByRef(ref x);
+        //TestPassByRef(ref x);
 
-        Console.WriteLine(x);
+        //Console.WriteLine(x);
 
-        Console.ReadLine();
+        //Console.ReadLine();
+
+        Computed computed = new Computed("Kavinda","Bandara");
+       
+        Console.WriteLine(computed.FullName);
+
+
 
     }
 
