@@ -75,12 +75,17 @@ internal class Program
         //}
 
 
-        Thread workerthread = new Thread(Worker);
-        workerthread.Start();
+        //Thread workerthread = new Thread(Worker);
+        //workerthread.Start();
 
+        //Console.ReadLine();
+        //_shouldTerminate = true;
+        //workerthread.Join(); 
+
+        var Person = GetPersonInfo();
+        Console.WriteLine($"Name : {Person.Item1}, Age : {Person.Item2}");
         Console.ReadLine();
-        _shouldTerminate = true;
-        workerthread.Join(); 
+
 
     }
 
@@ -111,5 +116,22 @@ internal class Program
         }
 
         Console.WriteLine("Terminated after {0} iterations.", counter);
+    }
+
+
+    public static Tuple<int, string> GetPersonInfo()
+    {
+        int age = 30;
+        string name = "Jhone";
+
+        return Tuple.Create(age, name);
+    }
+
+    public static (int Age,string name) GetPerson()
+    {
+        int age = 30;
+        string name = "Jhone";
+
+        return (age, name);
     }
 }
