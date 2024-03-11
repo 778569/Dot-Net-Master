@@ -88,13 +88,28 @@ internal class Program
 
         //var newValue = GetPerson();
 
-        var sum = CalculateSum([10, 20, 30, 40]);
-        Console.WriteLine(sum);
+        //var sum = CalculateSum([10, 20, 30, 40]);
+        //Console.WriteLine(sum);
+
+        DisplayMethod displayMethod = delegate (string message)
+        {
+            Console.WriteLine(message);
+        };
+
+        displayMethod("Check Delegate");
+    }
+    public partial class MyClass
+    {
+
     }
 
+    public partial class MyClass
+    {
+
+    }
     public static int TestPassByRef(ref int x)
     {
-        x= x * x;
+        x = x * x;
         return x;
     }
 
@@ -130,7 +145,7 @@ internal class Program
         return Tuple.Create(age, name);
     }
 
-    public static (int Age,string name) GetPerson()
+    public static (int Age, string name) GetPerson()
     {
         int age = 30;
         string name = "Jhone";
@@ -142,7 +157,7 @@ internal class Program
     {
         //Local function
 
-        int Add(int a , int b)
+        int Add(int a, int b)
         {
             return a + b;
         }
@@ -155,4 +170,9 @@ internal class Program
         }
         return sum;
     }
+
+    public delegate void DisplayMethod(string message);
+
 }
+
+    
