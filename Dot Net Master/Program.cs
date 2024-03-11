@@ -82,11 +82,14 @@ internal class Program
         //_shouldTerminate = true;
         //workerthread.Join(); 
 
-        var Person = GetPersonInfo();
-        Console.WriteLine($"Name : {Person.Item1}, Age : {Person.Item2}");
-        Console.ReadLine();
+        //var Person = GetPersonInfo();
+        //Console.WriteLine($"Name : {Person.Item1}, Age : {Person.Item2}");
+        //Console.ReadLine();
 
+        //var newValue = GetPerson();
 
+        var sum = CalculateSum([10, 20, 30, 40]);
+        Console.WriteLine(sum);
     }
 
     public static int TestPassByRef(ref int x)
@@ -133,5 +136,23 @@ internal class Program
         string name = "Jhone";
 
         return (age, name);
+    }
+
+    public static int CalculateSum(int[] numbers)
+    {
+        //Local function
+
+        int Add(int a , int b)
+        {
+            return a + b;
+        }
+
+        int sum = 0;
+
+        foreach (var number in numbers)
+        {
+            sum = Add(sum, number);
+        }
+        return sum;
     }
 }
