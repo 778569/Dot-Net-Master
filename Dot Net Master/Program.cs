@@ -91,12 +91,17 @@ internal class Program
         //var sum = CalculateSum([10, 20, 30, 40]);
         //Console.WriteLine(sum);
 
-        DisplayMethod displayMethod = delegate (string message)
-        {
-            Console.WriteLine(message);
-        };
+        //DisplayMethod displayMethod = delegate (string message)
+        //{
+        //    Console.WriteLine(message);
+        //};
 
-        displayMethod("Check Delegate");
+        //displayMethod("Check Delegate");
+
+        Complex_Number a = new Complex_Number(3,2);
+        Complex_Number b = new Complex_Number(1,4);
+
+        Complex_Number sum = a + b;
     }
     public partial class MyClass
     {
