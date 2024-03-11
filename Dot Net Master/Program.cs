@@ -126,4 +126,12 @@ internal class Program
 
         return Tuple.Create(age, name);
     }
+
+    public static (int Age,string name) GetPerson()
+    {
+        int age = 30;
+        string name = "Jhone";
+
+        return (age, name);
+    }
 }
