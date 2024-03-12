@@ -138,14 +138,41 @@ internal class Program
         //Cat cat = new Cat();
         //cat.Speak();
 
-        IAnimal animal = new Dos();
-        //animal.Speak();
-        Test01 test01 = new Test01(animal);
-        test01.TestDog();
+        //IAnimal animal = new Dos();
+        ////animal.Speak();
+        //Test01 test01 = new Test01(animal);
+        //test01.TestDog();
+
+        //Console.ReadLine();
+
+        //try
+        //{
+        //    throw new NotImplementedException();
+        //}
+        //catch (Exception ex)
+        //{
+        //    throw new Exception("Modified exception message", ex);
+            
+        //}
+
+        Nullable<int> MyNullable = null;
+        int? MyInt = null;
+        int? MyInt1 = 5;
+
+        if (string.IsNullOrEmpty(MyInt.ToString()))
+        {
+            Console.WriteLine("Yes");
+        }
+
+        var y = MyInt.GetValueOrDefault(1);
+
+        Console.WriteLine(MyInt.HasValue);
+       
+        Console.WriteLine(y);
+
+        int b = MyInt ?? 10;
 
         Console.ReadLine();
-
-
     }
     public partial class MyClass
     {
