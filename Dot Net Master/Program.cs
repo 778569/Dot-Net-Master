@@ -107,17 +107,32 @@ internal class Program
         //Dog dog = new Dog(6);
         //dog.MakeSound();
 
-        List<int> numbers = new List<int> {1,2,3,4,5,6,7,8,9 };
+        //List<int> numbers = new List<int> {1,2,3,4,5,6,7,8,9 };
 
-        IEnumerable<int> evenNumbers = numbers.Where(x => x % 2 == 0).ToList();
+        //IEnumerable<int> evenNumbers = numbers.Where(x => x % 2 == 0).ToList();
 
-        IEnumerable<int> evenNumberQ = (from x in numbers
-                                        where x % 2 == 0
-                                        select x).ToList();
-        foreach (int number in evenNumbers)
-        {
-            Console.WriteLine(number);
-        }
+        //IEnumerable<int> evenNumberQ = (from x in numbers
+        //                                where x % 2 == 0
+        //                                select x).ToList();
+        //foreach (int number in evenNumbers)
+        //{
+        //    Console.WriteLine(number);
+        //}
+
+        //int[] array = { 10, 20, 30 , 40};
+
+        //int result1 = TestParams.Sum(10,20,30,40);
+        //int result2 = TestParams.Sum();
+
+        //Console.WriteLine(result1);
+        //Console.WriteLine(result2);
+
+
+        int result = StaticClass.Add(10,20);
+
+        Console.WriteLine(result);
+
+
         Console.ReadLine();
     }
     public partial class MyClass
