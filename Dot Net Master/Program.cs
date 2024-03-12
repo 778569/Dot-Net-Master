@@ -2,6 +2,7 @@
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
+
 internal class Program
 {
     private static volatile bool _shouldTerminate = false;
@@ -98,10 +99,14 @@ internal class Program
 
         //displayMethod("Check Delegate");
 
-        Complex_Number a = new Complex_Number(3,2);
-        Complex_Number b = new Complex_Number(1,4);
+        //Complex_Number a = new Complex_Number(3,2);
+        //Complex_Number b = new Complex_Number(1,4);
 
-        Complex_Number sum = a + b;
+        //Complex_Number sum = a + b;
+
+        Dog dog = new Dog(6);
+
+
     }
     public partial class MyClass
     {
