@@ -173,37 +173,57 @@ internal class Program
         //int b = MyInt ?? 10;
 
 
-        List<int> numbers = new List<int>() { 1, 2, 3, 4, 5, 6 };
+        //List<int> numbers = new List<int>() { 1, 2, 3, 4, 5, 6 };
 
-        IEnumerable<int> QuerySyn = (from x in numbers
-                                     where x % 2 == 0
-                                     select x).ToList();
+        //IEnumerable<int> QuerySyn = (from x in numbers
+        //                             where x % 2 == 0
+        //                             select x).ToList();
 
-        foreach (var item in QuerySyn)
-        {
-            Console.WriteLine(item);
-        }
-
-
-        var MethodSyn = numbers.Where(x => x % 2 == 0).ToList();
-        foreach (var item in MethodSyn)
-        {
-            Console.WriteLine(item);
-        }
-
-        Console.ReadLine();
+        //foreach (var item in QuerySyn)
+        //{
+        //    Console.WriteLine(item);
+        //}
 
 
+        //var MethodSyn = numbers.Where(x => x % 2 == 0).ToList();
+        //foreach (var item in MethodSyn)
+        //{
+        //    Console.WriteLine(item);
+        //}
+
+        //Console.ReadLine();
 
 
 
+        //string myName = "Kavinda";
+
+        //myName = "Banadara";
+
+        //Console.WriteLine(myName);
 
 
+        //int x = 5;
+        //x = 10;
+
+        //Console.WriteLine(x);
 
 
+        //Person person01 = new Person();
+        //person01.Name = "Kavinda";
+        //Console.WriteLine(person01.Name);
+        //Console.WriteLine();
 
+        //Person person02 = person01; //Both nperson 1 and person 2 reference the same object in memory
+        //Console.WriteLine(person01.Name);
+        //Console.WriteLine(person02.Name);
+        //Console.WriteLine();
 
+        //person02.Name = "Shaku";
+        //Console.WriteLine(person01.Name);
+        //Console.WriteLine(person02.Name);
 
+        Person person01 = new Person();
+        Person person02 = new Person("Shakuni",29);
 
 
 
@@ -284,6 +304,52 @@ internal class Program
 
     public delegate void DisplayMethod(string message);
 
+    public async Task<string> DownloadCountAsync(string url)
+    {
+        using (HttpClient client = new HttpClient())
+        {
+            var content = await client.GetStringAsync(url);
+            return content;
+        }
+    }
+
+    public class Person
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+
+        public Person()
+        {
+            Name = "Kavinda";
+            Age = 29;
+        }
+        public Person(string name, int age)
+        {
+            this.Name = name;
+            this.Age = age;
+
+            Console.WriteLine($"your name : {name} and your age : {age}");
+        }
+
+
+
+        public int Number;
+
+        public int number
+        {
+            get { return number; }
+            set { number = value; }
+        }
+
+        public int[] items = new int[5];
+
+        public int this[int index]
+        {
+            get { return items[index]; }
+            set { items[index] = value; }
+
+        }
+    }
 }
 
     
