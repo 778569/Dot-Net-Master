@@ -104,9 +104,21 @@ internal class Program
 
         //Complex_Number sum = a + b;
 
-        Dog dog = new Dog(6);
-        dog.MakeSound();
+        //Dog dog = new Dog(6);
+        //dog.MakeSound();
 
+        List<int> numbers = new List<int> {1,2,3,4,5,6,7,8,9 };
+
+        IEnumerable<int> evenNumbers = numbers.Where(x => x % 2 == 0).ToList();
+
+        IEnumerable<int> evenNumberQ = (from x in numbers
+                                        where x % 2 == 0
+                                        select x).ToList();
+        foreach (int number in evenNumbers)
+        {
+            Console.WriteLine(number);
+        }
+        Console.ReadLine();
     }
     public partial class MyClass
     {

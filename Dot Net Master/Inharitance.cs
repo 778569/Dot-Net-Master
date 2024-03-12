@@ -12,6 +12,10 @@ namespace Dot_Net_Master
 
     public class Animal 
     {
+        public string name { get; set; }
+
+       
+
 
         public int Legs { get; set; }
 
@@ -19,6 +23,7 @@ namespace Dot_Net_Master
         {
             this.Legs = legs;
             //Console.WriteLine($"This animal has {legs}");
+            
         }
 
         public virtual void MakeSound()
@@ -41,6 +46,10 @@ namespace Dot_Net_Master
 
             Console.ReadLine();
         }
+    }
+    public struct Pet 
+    {
+        
     }
 
 }
