@@ -24,7 +24,7 @@ namespace Dot_Net_Master
         //}
         public void Speak()
         {
-               Console.WriteLine("Dos Bark");
+               Console.WriteLine("Cat Meows");
 
         }
     }
