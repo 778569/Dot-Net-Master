@@ -105,7 +105,7 @@ internal class Program
         //Complex_Number sum = a + b;
 
         Dog dog = new Dog(6);
-
+        dog.MakeSound();
 
     }
     public partial class MyClass
