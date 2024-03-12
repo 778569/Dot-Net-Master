@@ -152,25 +152,60 @@ internal class Program
         //catch (Exception ex)
         //{
         //    throw new Exception("Modified exception message", ex);
-            
+
         //}
 
-        Nullable<int> MyNullable = null;
-        int? MyInt = null;
-        int? MyInt1 = 5;
+        //Nullable<int> MyNullable = null;
+        //int? MyInt = null;
+        //int? MyInt1 = 5;
 
-        if (string.IsNullOrEmpty(MyInt.ToString()))
+        //if (string.IsNullOrEmpty(MyInt.ToString()))
+        //{
+        //    Console.WriteLine("Yes");
+        //}
+
+        //var y = MyInt.GetValueOrDefault(1);
+
+        //Console.WriteLine(MyInt.HasValue);
+
+        //Console.WriteLine(y);
+
+        //int b = MyInt ?? 10;
+
+
+        List<int> numbers = new List<int>() { 1, 2, 3, 4, 5, 6 };
+
+        IEnumerable<int> QuerySyn = (from x in numbers
+                                     where x % 2 == 0
+                                     select x).ToList();
+
+        foreach (var item in QuerySyn)
         {
-            Console.WriteLine("Yes");
+            Console.WriteLine(item);
         }
 
-        var y = MyInt.GetValueOrDefault(1);
 
-        Console.WriteLine(MyInt.HasValue);
-       
-        Console.WriteLine(y);
+        var MethodSyn = numbers.Where(x => x % 2 == 0).ToList();
+        foreach (var item in MethodSyn)
+        {
+            Console.WriteLine(item);
+        }
 
-        int b = MyInt ?? 10;
+        Console.ReadLine();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         Console.ReadLine();
     }
