@@ -128,12 +128,24 @@ internal class Program
         //Console.WriteLine(result2);
 
 
-        int result = StaticClass.Add(10,20);
+        //int result = StaticClass.Add(10,20);
 
-        Console.WriteLine(result);
+        //Console.WriteLine(result);
 
+        //MyDelegate myDelegate = MyClass.
+        //myDelegate("Hello World");
+
+        //Cat cat = new Cat();
+        //cat.Speak();
+
+        IAnimal animal = new Dos();
+        //animal.Speak();
+        Test01 test01 = new Test01(animal);
+        test01.TestDog();
 
         Console.ReadLine();
+
+
     }
     public partial class MyClass
     {
