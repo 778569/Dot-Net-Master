@@ -51,15 +51,15 @@ internal class Program
         //Console.ReadLine();
 
 
-        //int x = 5;
+        int x = 5;
 
-        //Console.WriteLine(x);
+        Console.WriteLine(x);
 
-        //TestPassByRef(ref x);
+        TestPassByRef(ref x);
 
-        //Console.WriteLine(x);
+        Console.WriteLine(x);
 
-        //Console.ReadLine();
+        Console.ReadLine();
 
         //Computed computed = new Computed("Kavinda","Bandara");
 
@@ -222,12 +222,35 @@ internal class Program
         //Console.WriteLine(person01.Name);
         //Console.WriteLine(person02.Name);
 
-        Person person01 = new Person();
-        Person person02 = new Person("Shakuni",29);
+        //Person person01 = new Person();
+        //Person person02 = new Person("Shakuni",29);
 
 
 
-        Console.ReadLine();
+
+
+        //try
+        //{
+        //    throw new CustomException("This is Custome");
+        //}
+        //catch (CustomException ex)
+        //{
+
+        //    Console.WriteLine("Caught a Custome Exception : " + ex.Message);
+        //}
+
+
+
+        //Person person01 = new Person();
+        
+
+
+
+
+
+
+
+        //Console.ReadLine();
     }
     public partial class MyClass
     {
@@ -347,6 +370,27 @@ internal class Program
         {
             get { return items[index]; }
             set { items[index] = value; }
+
+        }
+
+        public const double Pi = 3.14;
+    }
+
+
+    public class GenericsList<T>
+    {
+        public GenericsList()
+        {
+
+        }
+    }
+
+    public abstract class AbscClass
+    {
+        public abstract void Count();
+
+        public void MyCount()
+        {
 
         }
     }
